@@ -31,21 +31,27 @@ class TV extends React.Component {
     render() {
         return (
             // <Router>
-                <div>
-                    <h1>Browse Tv Shows</h1>
+            <div className="wrapper">
+                    <h2>Browse Tv Shows</h2>
                     <div className='movie-catalogue'>
                         {this.state.tv.map((tv, i) => {
                             return (
                                 <div key={tv.id} className='movie-catalogue__movie'>
-                                    <Link to={`/tv/${tv.id}`}>
+                                    
                                         <img src={`http://image.tmdb.org/t/p/w500/${tv.poster_path}`} />
 
                                         {/* {props.saved !== null && <button onClick={() =>
-                                            props.onSave(props.tv)} className="icon-button saved-button"> {props.saved ? <i class="fas fa-check fa-lg icon"></i> : <i class="fas fa-plus fa-lg icon"></i>}
+                                            props.onSave(props.tv)} className="icon-button saved-button"> {props.saved ? <i className="fas fa-check fa-lg icon"></i> : <i className="fas fa-plus fa-lg icon"></i>}
                                         </button>} */}
-                                        <i class="fas fa-plus fa-lg icon"></i>
-                                    
-                                    </Link>
+                                        {/* <span className="fa-stack fa-2x icon">
+                                            <i className="far fa-circle fa-stack-2x"></i>
+                                            <i className="fas fa-plus fa-stack-1x fa-inverse"></i>    
+                                        </span> */}
+                                    {/* <Link to={`/tv/${tv.id}`}>
+                                        <div className='show-details'>
+                                        <i className="fas fa-chevron-down fa-3x"></i>
+                                       </div>
+                                    </Link> */}
                                 </div>
                             )
                         })}
@@ -58,4 +64,4 @@ class TV extends React.Component {
     }
 }
 
-export default TV
+export default TV;

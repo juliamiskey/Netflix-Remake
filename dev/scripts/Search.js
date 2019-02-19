@@ -25,7 +25,7 @@ class Search extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="wrapper">
                 <h2>Discover New Movies & TV Shows</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label className="search-fields" htmlFor="with_genres"> Pick a Genre: </label>

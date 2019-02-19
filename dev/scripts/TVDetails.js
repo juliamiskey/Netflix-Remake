@@ -28,18 +28,18 @@ class TVDetails extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="wrapper">
                 <div className='movie-single__poster'>
                     <div className='movie-single__description'>
                         <h2>{this.state.tv.name}</h2>
-                        <h4>{this.state.tv.vote_average}</h4>
+                        <h4>{this.state.tv.vote_average}/10 Rating</h4>
                         <h4>{this.state.tv.first_air_date}</h4>
                         <p>{this.state.tv.overview}</p>
-                        <a href="http://www.netflix.com" target="_blank"><i class="fas fa-play"></i>PlAY</a>
-                        <button>MY LIST</button>
+                        <a href="http://www.netflix.com" target="_blank"><i class="fas fa-play play"></i> PlAY</a>
+                        {/* <button><i class="fas fa-plus fa-lg"></i> MY LIST</button> */}
                     </div>
                     <div className='movie-single__image'>
-                        <img src={`http://image.tmdb.org/t/p/w500/${this.state.tv.poster_path}`} />
+                        <img src={`http://image.tmdb.org/t/p/w500/${this.state.tv.backdrop_path}`} />
                     </div>
                 </div>
             </div>

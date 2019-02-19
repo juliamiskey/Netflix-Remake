@@ -109,25 +109,28 @@ class Mylist extends React.Component {
     }
     render() {
         return (
-            <div className="saved-results">
-                <Link to="/notes"><img src="/dev/styles/assets/edit-black.svg" alt="add notes" className="notes-button" /></Link>
-                {this.state.jobsSaved.map((job) => {
-                    return (
-                        <JobSearchResults
-                            key={`saved-${job.jobkey}`}
-                            job={job}
-                            loggedIn={this.state.loggedIn}
-                            onSave={this.saveJob}
-                            onApply={this.applyForJob}
-                            saved={null}
-                            applied={null}
-                        />
-                    )
-                })}
+            <div className="wrapper">
+                <h2>My List</h2>
+                <div className="saved-results">
+                    <Link to="/notes"><img src="/dev/styles/assets/edit-black.svg" alt="add notes" className="notes-button" /></Link>
+                    {this.state.jobsSaved.map((job) => {
+                        return (
+                            <JobSearchResults
+                                key={`saved-${job.jobkey}`}
+                                job={job}
+                                loggedIn={this.state.loggedIn}
+                                onSave={this.saveJob}
+                                onApply={this.applyForJob}
+                                saved={null}
+                                applied={null}
+                            />
+                        )
+                    })}
 
+                </div>
             </div>
         )
     }
 }
 
-export default Mylist
+export default Mylist;
