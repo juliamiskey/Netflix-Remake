@@ -56,8 +56,8 @@ class TV extends React.Component {
                             )
                         })}
                     </div>
-                    {/* <Link to="/TV2"> Next Page </Link>
-                    <Route exact path="/TV2" component={TV2} /> */}
+                    <Link to="/TV2"> Next Page </Link>
+                    <Route exact path="/TV2" component={TV2} />
                 </div>
             // </Router>
         )

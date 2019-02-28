@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import firebase from 'firebase';
 import Movies from './Movies';
 import TV from './TV';
-// import Search from './Search';
-// import Mylist from './Mylist';
+import Search from './Search';
+import Mylist from './Mylist';
 import MovieDetails from './MovieDetails';
 import TVDetails from './TVDetails';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
@@ -80,8 +80,8 @@ class App extends React.Component {
               <Link to="/TV"> TV Shows </Link>
               <Link to="/"> Movies </Link>
               <Link to="/">Recently Added </Link>
-              {/* <Link to="/mylist"> My List </Link> */}
-              {/* <Link to="/search"> <i class="fas fa-search"></i> </Link> */}
+              <Link to="/mylist"> My List </Link>
+              <Link to="/search"> <i class="fas fa-search"></i> </Link>
               <div className="signin-button">
                 {this.state.loggedIn === false && <button onClick=
                   {this.loginWithGoogle}>Sign In <i class="fas fa-caret-down"></i></button>}
@@ -96,8 +96,8 @@ class App extends React.Component {
           <Route exact path="/movie/:movie_id" component={MovieDetails} />
           <Route exact path="/TV" component={TV} />
           <Route exact path="/tv/:tv_id" component={TVDetails} />
-          {/* <Route exact path="/Mylist" component={Mylist} /> */}
-          {/* <Route exact path="/Search" component={Search} /> */}
+          <Route exact path="/Mylist" component={Mylist} />
+          <Route exact path="/Search" component={Search} />
         </div>
       </Router>
     )
